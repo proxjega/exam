@@ -1,6 +1,11 @@
-#include <iostream>
+#include "../include/libformain.h"
+
+
 
 void main()
 {
-	std::cout << "Hello, World!" << std::endl;
+	_setmode(_fileno(stdout), _O_WTEXT);
+	_setmode(_fileno(stderr), _O_WTEXT);
+	WordCounterWithUrls wc;
+	wc.input("text.txt");
 }
