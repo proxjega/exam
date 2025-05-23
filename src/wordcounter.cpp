@@ -5,7 +5,7 @@ WordCounterWithUrls::~WordCounterWithUrls()
 	words.clear();
 	urls.clear();
 }
-std::wstring FixWord(std::wstring word);
+std::wstring FixWord(std::wstring &word);
 void WordCounterWithUrls::input(std::string filename) {
 	std::wifstream file(filename);
 	file.imbue(std::locale(file.getloc(), new std::codecvt_utf8<wchar_t>));
@@ -15,7 +15,19 @@ void WordCounterWithUrls::input(std::string filename) {
 	}
 	std::wstringstream input;
 	input << file.rdbuf();
-	
+	file.close();
+	// Prepare the output stream 
+	std::wstring temp = input.str();
+	for (int i = 0; i < temp.length(); i++) {
+		wchar_t c = temp[i];
+		if (c == L'-' || c == L'/' || c == L'–') {
+			temp.replace(i, 1, L" ");
+		}
+	}
+	std::wcout << L"File content: " << temp << std::endl; //debug
+	input.clear();
+	input.str(temp);
+
 	while (input) {
 		std::wstring word;
 		input >> word;
@@ -27,7 +39,7 @@ void WordCounterWithUrls::input(std::string filename) {
 	//std::wcout << L"File content: " << input.str() << std::endl;
 }
 
-std::wstring FixWord(std::wstring word) {
+std::wstring FixWord(std::wstring &word) {
 	//std::array<wchar_t, 26> arr = { L'/' , L'\\' , L':' , L'*' , L'?' , L'"' , L'<' , L'>' , L'|' , L'#'
 	//	, L'.' , L',' , L'!' , L'@' , L'$' , L'%' , L'^' , L'&' , L'(' , L')'
 	//	, L'-' , L'=' , L'_' , L'„' , L'“' , L'–' };

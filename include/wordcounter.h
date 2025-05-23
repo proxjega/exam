@@ -10,14 +10,16 @@
 #include <codecvt>
 #include <algorithm>
 #include <array>
+#include <vector>
+#include <set>
 
 
 class WordCounterWithUrls
 {
 private:
-	std::map<std::wstring, int> words;
-	std::map<std::wstring, int> urls;
-	std::map<int, std::wstring> lines;
+	std::map<std::wstring, std::vector<int>> words;
+	std::set<std::wstring> urls;
+	//std::map<int, std::wstring> lines;
 public:
 	WordCounterWithUrls() = default;
 	~WordCounterWithUrls();
