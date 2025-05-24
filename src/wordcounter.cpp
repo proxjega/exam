@@ -21,7 +21,7 @@ void WordCounterWithUrls::input(std::string filename) {
 		PrepareUrls(urldomains);
 	}
 	catch (const std::runtime_error& e) {
-		std::wcerr << L"Error preparing URL domains: " << e.what();
+		throw std::runtime_error( e.what());
 		return;
 	}
 	// extracting URLs from the input stream
