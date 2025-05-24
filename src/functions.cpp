@@ -23,7 +23,10 @@ void PrepareUrls(std::vector<std::wstring> &urls ) {
 }
 
 void FixWord(std::wstring& word) {
-
+	if (word.length() == 2 && word[1] == L'.') {
+		word.clear();
+		return;
+	}
 	for (int i = 0; i < word.length(); i++) {
 		wchar_t c = word[i];
 		if (c == L'1' || c == L'2' || c == L'3' || c == L'4' || c == L'5' || c == L'6' || c == L'7' || c == L'8' || c == L'9' || c == L'0') {

@@ -81,6 +81,7 @@ void WordCounterWithUrls::output(std::wstring filename) {
 	outputFile  << std::setw(20) << std::left << L"Word" << std::setw(10) << std::left << L"Count" << std::setw(30) << std::left << L"Lines" << std::endl;
 	outputFile << L"--------------------------------------------------------" << std::endl;
 	for (const auto& pair : _words) {
+		if (pair.second[0] < 2) continue; 
 		outputFile << std::setw(20) << std::left << pair.first << std::setw(10) << std::left << pair.second[0];
 		for (size_t i = 1; i < pair.second.size(); ++i) {
 			outputFile << pair.second[i] << (i < pair.second.size() - 1 ? L", " : L"");
