@@ -1,0 +1,56 @@
+Apie Linux branduolį skaitykite straipsnį Linux branduolys. Apie asteroidą pavadinimu „Linux“ skaitykite straipsnį 9885 Linux.
+
+Linux talismanas - pingvinas „Tux“
+Linux – atviro kodo Unix-tipo operacinių sistemų, naudojančių Linux branduolį (angl. kernel), šeima. Pirmąją Linux branduolio versiją (versija 0.01) 1991 m. rugsėjo 17 d. išleido jo kūrėjas Linus Torvalds[1]. Skirtingos Linux operacinės sistemos atšakos yra vadinamos Linux platinamaisiais paketais arba distribucijomis (angl. distribution).
+
+
+Linus Torvalds, pagrindinis Linux branduolio kūrėjas
+Linux platinamąjį paketą sudaro Linux branduolys bei sisteminės programos (angl. system software) ir bibliotekos (angl. libraries), kurių dauguma yra sukurtos 1983 metais įkurto GNU projekto. Nors dažniausiai naudojamas pavadinimas yra „Linux“, Laisvosios programinės įrangos fondas naudoja pavadinimą „GNU/Linux“ taip pabrėždamas GNU programinės įrangos svarbą.
+
+Linux šeimos operacinės sistemos plačiai naudojamos serveriuose, asmeniniuose kompiuteriuose, mobiliuose telefonuose (Android), superkompiuteriuose ir kitur.
+
+Istorija
+Linux priešistorė
+1969 metais JAV telekomunikacijų bendrovė AT&T sukūrė operacinę sistemą Unix, kuri padarė didelę įtaką Linux operacinės sistemos kūrimo principams. Unix operacinė sistema buvo pradėta platinti 1971 metais.
+
+1983 metais Ričardas Stalmanas įkūrė GNU projektą, siekdamas sukurti į Unix panašią išbaigtą atviro išeities teksto operacinę sistemą.
+
+1985 metais Stalmanas įkūrė Laisvosios programinės įrangos fondą, kurio tikslas buvo skatinti laisvosios programinės įrangos naudojimą, o 1989 metais parašė GNU GPL licenciją, kuri šiuo metu yra viena populiariausių atvirojo kodo licencijų. GNU projektas sukūrė daug laisvosios programinės įrangos, bet jo kuriamas branduolys, GNU Hurd, iki Linux sukūrimo dar nebuvo pabaigtas. Linus Torvalds yra paminėjęs, kad jei būtų buvęs išleistas GNU Hurd branduolys, jis nebūtų nusprendęs kurti Linux branduolio.[2]
+
+
+Unix ir giminingų sistemų genealogija. Matyti BSD, Minix, ir Linux, bei kitos operacinės sistemos.
+1987 metais buvo išleista Minix, Unix tipo mikrobranduolinės architektūros kompiuterių operacinė sistema. Andrew S. Tanenbaum ją sukūrė mokymo tikslais. Minix operacinė sistema paskatino Linux kūrimą.
+
+1992 metais išleista atviro kodo 386BSD operacinė sistema. Linus Torvalds minėjo, kad jei 386BSD būtų buvusi išleista anksčiau, jis turbūt nebūtų pradėjęs kurti Linux branduolio.[3]
+
+Kūrimas
+1991 metais Suomijos Helsinkio universiteto studentas Linus Torvalds parašė laišką į comp.os.minix naujienų grupę, pranešdamas, kad jo kuriama operacinė sistema jau „beveik veikia“ [4]. Ši data ir šis laiškas oficialiai laikomas Linux gimtadieniu.
+
+1992 m. Linux autoriai paskelbė branduolį GNU GPL licencijos sąlygomis. Linux buvo integruotas į GNU projektą. Projektas atkreipė daugybės programuotojų iš viso pasaulio dėmesį ir buvo toliau tobulinamas.
+
+1994 metais internete pradėta platinti 1.0 Linux branduolio versija.
+
+Įsitraukus pasaulinei programuotojų bendruomenei, greitai GNU/Linux operacinė sistema tapo žinoma kaip viena stabiliausių ir galingiausių profesionalių operacinių sistemų. Jos naudojimui tada reikėjo profesionalių žinių ir įgūdžių. GNU/Linux programuotojai kūrė ją programuotojams.
+
+Vėliau
+Buvo kuriami ir komerciniai Linux distributyvai, kurių kūrėjai pelnėsi iš jų pardavimo ir palaikymo. GNU licencija neleidžia uždrausti programos ir patobulintos jos versijos kopijavimo, tačiau atsirado nemažai įmonių, kurios rado verslo modelių, kaip nepažeidžiant licencijos pelnytis iš GNU produktų. Dažniausiai tai pajamos iš produktų palaikymo. Tokiu atveju įmonė teikia profesionalią paramą mažiau profesionaliems kliento darbuotojams. Tai buvo vienas iš ekonominių stimulų GNU/Linux produktus pritaikyti ir kompiuterių vartotojams.
+
+Kūrėsi vis daugiau įmonių, kur GNU/Linux sistemų kūrimas buvo organizuojamas, finansuojamas filantropų arba kompiuterių įrangos gamintojų, kurie tuo siekė geresnių savo įrangos pardavimų. Tokių įmonių tikslas buvo sukurti sistemą ir programų rinkinį (platinamąjį paketą), skirtą plačiam vartotojų ratui.
+
+Buvo kuriama vis daugiau patogių GNU/Linux administravimo sistemų. Jų naudojimas tapo vis paprastesnis. Tuo tarpu kiti alternatyvūs nuosavybiniai produktai buvo paprastesni, užtat nestabilūs, neatsparūs virusams ir įsilaužimams - priešingai nei GNU/Linux. Tokių produktų kūrėjams įvedant papildomas apsaugos priemones, jų naudojimas tapo vis sudėtingesnis, ir apie 2002 metus vienų ir kitų sistemų naudojimo sudėtingumas išsilygino.
+
+2004 m. spalio 20 d. išleista pirmoji Ubuntu versija. Tai Debian pagrindu sukurta operacinė sistema, dar labiau pritaikyta neprofesionaliam vartotojui. Jos pagrindu kuriamos naujos Baltix versijos.
+
+Ginčai dėl pavadinimo tikslumo
+Dažnai Linux vadinamas ne branduolys, o pati operacinė sistema. Šią operacinę sistemą sudaro Linux branduolys, programinė įranga iš GNU projekto bei kitos laisvai platinamos programos ir pagalbiniai įrankiai. Todėl daugelis specialistų teigia, kad operacinę sistemą tiksliau būtų vadinti GNU/Linux.
+
+Platinamieji paketai
+Dažnai žodis Linux vartojamas apibūdinant platinamuosius paketus (dar vadinami GNU/Linux distributyvais), kuriuose yra Linux branduolys, GNU programos ir daug kitų, dažniausiai laisvų programų. Skirtingi distributyvai gali būti taikomi specifiniams tikslams, tačiau populiariausi distributyvai skirti plačiajam vartotojų ratui. Populiariausi Linux distributyvai (pagal 2009 metų distrowatch.com[5]statistiką) yra Ubuntu Linux, OpenSuse Linux, Linux Mint, Fedora/Redhat, Debian GNU/Linux, Mandriva Linux ir PCLinuxOS. Nuo 2005 metų pagal Distrowatch statistiką Ubuntu yra pati populiariausia GNU/Linux operacinė sistema. Debian kartais vadinamas meta – distributyvu, nes jo pagrindu kuriami kiti distributyvai (pvz., Baltix, Knoppix, Ubuntu).
+
+Nuorodos
+	
+Vikiteka: Linux – vaizdinė ir garsinė medžiaga http://www.kernel.org/ 
+Linux branduolys Linux branduolio puslapis http://www.li.org/linuxhistory.php
+Linus Torvalds parašyta Linux atsiradimo istorija Archyvuota kopija 2004-07-03 iš Wayback Machine projekto.
+Atvirojo kodo svetainė Lietuvoje Archyvuota kopija 2018-06-21 iš Wayback Machine projekto. http://www.akl.lt/
+Oficiali „Linux“ Svetainė http://www.linux.com/
