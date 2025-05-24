@@ -370,7 +370,6 @@ FodyWeavers.xsd
 /CMakeCache.txt
 *.cmake
 /install_manifest.txt
-urldomains.txt
 result.txt
 text1.txt
 text2.txt
