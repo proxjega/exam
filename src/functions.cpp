@@ -15,27 +15,24 @@ void PrepareUrls(std::vector<std::wstring> &urls ) {
 		input >> url;
 		std::transform(url.begin(), url.end(), url.begin(), ::tolower);
 		url = L"." + url;
-		std::wcout << L"URL: " << url << std::endl;
+		//std::wcout << L"URL: " << url << std::endl;
 		if (url.length() > 1) {
 			urls.push_back(url);
 		}
 	}
 }
 
-std::wstring FixWord(std::wstring& word) {
-	//std::array<wchar_t, 26> arr = { L'/' , L'\\' , L':' , L'*' , L'?' , L'"' , L'<' , L'>' , L'|' , L'#'
-	//	, L'.' , L',' , L'!' , L'@' , L'$' , L'%' , L'^' , L'&' , L'(' , L')'
-	//	, L'-' , L'=' , L'_' , L'„' , L'“' , L'–' };
+void FixWord(std::wstring& word) {
+
 	for (int i = 0; i < word.length(); i++) {
 		wchar_t c = word[i];
 		if (c == L'1' || c == L'2' || c == L'3' || c == L'4' || c == L'5' || c == L'6' || c == L'7' || c == L'8' || c == L'9' || c == L'0') {
 			word.clear();
-			return word;
+			//return word;
 		}
 		if (c == L'[') {
-			std::wcout << L"Fixed word: " << word.substr(0, i) << std::endl;
 			word = word.substr(0, i);
-			return word;
+			//return word;
 		}
 		if (c == L'/' || c == L'\\' || c == L':' || c == L'*' || c == L'?' || c == L'"' || c == L'<' || c == L'>' || c == L'|' || c == L'#'
 			|| c == L'.' || c == L',' || c == L'!' || c == L'@' || c == L'$' || c == L'%' || c == L'^' || c == L'&' || c == L'(' || c == L')'
@@ -45,6 +42,5 @@ std::wstring FixWord(std::wstring& word) {
 			i--;
 		}
 	}
-	std::wcout << L"Fixed word: " << word << std::endl;
-	return word;
+	//return word;
 }

@@ -17,12 +17,12 @@
 class WordCounterWithUrls
 {
 private:
-	std::map<std::wstring, std::vector<int>> words;
-	std::set<std::wstring> urls;
+	std::map<std::wstring, std::vector<int>> _words;
+	std::set<std::wstring> _urls;
 	//std::map<int, std::wstring> lines;
 public:
 	WordCounterWithUrls() = default;
 	~WordCounterWithUrls();
 	void input(std::string filename);
-	void output();
+	void output(std::wstring filename);
 };
