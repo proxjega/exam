@@ -19,7 +19,7 @@ void WordCounterWithUrls::input(std::string filename) {
 	std::vector<std::wstring> urldomains;
 	PrepareUrls(urldomains);
 	// extracting URLs from the input stream
-	int counter = 0;
+	int counter = 1;
 	for (std::wstring line; std::getline(input, line); counter++) {
 		std::transform(line.begin(), line.end(), line.begin(), 
 			[](wchar_t c) { return std::tolower(c, std::locale());});
@@ -78,15 +78,19 @@ void WordCounterWithUrls::input(std::string filename) {
 void WordCounterWithUrls::output(std::wstring filename) {
 	std::wofstream outputFile(filename);
 	outputFile.imbue(std::locale(outputFile.getloc(), new std::codecvt_utf8<wchar_t>));
+	outputFile  << std::setw(20) << std::left << L"Word" << std::setw(10) << std::left << L"Count" << std::setw(30) << std::left << L"Lines" << std::endl;
+	outputFile << L"--------------------------------------------------------" << std::endl;
 	for (const auto& pair : _words) {
-		outputFile << L"Word: " << pair.first << L", Count: " << pair.second[0] << L", Lines: ";
+		outputFile << std::setw(20) << std::left << pair.first << std::setw(10) << std::left << pair.second[0];
 		for (size_t i = 1; i < pair.second.size(); ++i) {
 			outputFile << pair.second[i] << (i < pair.second.size() - 1 ? L", " : L"");
 		}
 		outputFile << std::endl;
 	}
+	outputFile << L"--------------------------------------------------------" << std::endl;
+	outputFile << L"Found URLs:" << std::endl;
 	for (const auto& url : _urls) {
-		outputFile << L"URL found: " << url << std::endl; //debug
+		outputFile << url << std::endl; 
 	}
 }
 

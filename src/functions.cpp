@@ -35,7 +35,7 @@ void FixWord(std::wstring& word) {
 			//return word;
 		}
 		if (c == L'/' || c == L'\\' || c == L':' || c == L'*' || c == L'?' || c == L'"' || c == L'<' || c == L'>' || c == L'|' || c == L'#'
-			|| c == L'.' || c == L',' || c == L'!' || c == L'@' || c == L'$' || c == L'%' || c == L'^' || c == L'&' || c == L'(' || c == L')'
+			|| c == L'.' || c == L',' || c == L'!' || c == L'@' || c == L'$' || c == L'%' || c == L'^' ||/* c == L'&' ||*/ c == L'(' || c == L')'
 			|| c == L'-' || c == L'=' || c == L'_' || c == L'„' || c == L'“' || c == L'–') {
 			word.erase(word.begin() + i);
 			//word.replace(i, 1, L" ");

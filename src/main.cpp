@@ -32,6 +32,7 @@ void main()
 		}
 		std::wcout << L"Saving results to: " << outputFilename << std::endl;
 		wc.output(outputFilename);
+		std::wcout << L"Results saved successfully.\n";
 		break;
 	}
 	
