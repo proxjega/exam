@@ -17,7 +17,13 @@ void WordCounterWithUrls::input(std::string filename) {
 	input << file.rdbuf();
 	file.close();
 	std::vector<std::wstring> urldomains;
-	PrepareUrls(urldomains);
+	try {
+		PrepareUrls(urldomains);
+	}
+	catch (const std::runtime_error& e) {
+		std::wcerr << L"Error preparing URL domains: " << e.what();
+		return;
+	}
 	// extracting URLs from the input stream
 	int counter = 1;
 	for (std::wstring line; std::getline(input, line); counter++) {

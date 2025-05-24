@@ -4,7 +4,7 @@
 void PrepareUrls(std::vector<std::wstring> &urls ) {
 	std::wifstream domainfile("urldomains.txt");
 	if (!domainfile) {
-		std::wcerr << L"File not found: urldomains.txt" << std::endl;
+		throw std::runtime_error("File not found: urldomains.txt");
 		return;
 	}
 	std::wstringstream input;

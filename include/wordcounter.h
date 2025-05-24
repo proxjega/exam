@@ -24,6 +24,10 @@ private:
 public:
 	WordCounterWithUrls() = default;
 	~WordCounterWithUrls();
+	std::map<std::wstring, std::vector<int>> getWords() const { return _words; }
+	std::set<std::wstring> getUrls() const { return _urls; }
+	void setWords(const std::map<std::wstring, std::vector<int>>& words) { _words = words; }
+	void setUrls(const std::set<std::wstring>& urls) { _urls = urls; }
 	void input(std::string filename);
 	void output(std::wstring filename);
 };
