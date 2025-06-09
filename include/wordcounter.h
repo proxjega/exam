@@ -20,6 +20,7 @@ class WordCounterWithUrls
 private:
 	std::map<std::wstring, std::vector<int>> _words;
 	std::set<std::wstring> _urls;
+	std::set<std::wstring> _foundwords;
 	//std::map<int, std::wstring> lines;
 public:
 	WordCounterWithUrls() = default;

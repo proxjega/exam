@@ -1,4 +1,4 @@
-#include "../include/libforfunctions.h"
+ï»¿#include "../include/libforfunctions.h"
 
 
 void PrepareUrls(std::vector<std::wstring> &urls ) {
@@ -26,6 +26,7 @@ void FixWord(std::wstring& word) {
 		word.clear();
 		return;
 	}
+
 	for (int i = 0; i < word.length(); i++) {
 		wchar_t c = word[i];
 		if (c == L'1' || c == L'2' || c == L'3' || c == L'4' || c == L'5' || c == L'6' || c == L'7' || c == L'8' || c == L'9' || c == L'0') {
@@ -35,8 +36,8 @@ void FixWord(std::wstring& word) {
 			word = word.substr(0, i);
 		}
 		if (c == L'/' || c == L'\\' || c == L':' || c == L'*' || c == L'?' || c == L'"' || c == L'<' || c == L'>' || c == L'|' || c == L'#'
-			|| c == L'.' || c == L',' || c == L'!' || c == L'@' || c == L'$' || c == L'%' || c == L'^' ||/* c == L'&' ||*/ c == L'(' || c == L')'
-			|| c == L'-' || c == L'=' || c == L'_' || c == L'„' || c == L'“' || c == L'–') {
+			|| c == L'.' || c == L'Ëˆ' || c == L'\'' || c == L',' || c == L'!' || c == L'@' || c == L'$' || c == L'%' || c == L'^' ||/* c == L'&' ||*/ c == L'(' || c == L')'
+			|| c == L'-' || c == L'=' || c == L'_' || c == L'â€ž' || c == L'â€œ' || c == L'â€“') {
 			word.erase(word.begin() + i);
 			i--;
 		}

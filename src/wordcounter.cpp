@@ -42,6 +42,18 @@ void WordCounterWithUrls::input(std::string filename) {
 					if (word.find(L"[") != std::wstring::npos) {
 						word = word.substr(0, word.find(L"["));
 					}
+					wchar_t c = word[word.length() - 1];
+					if (c == L'/' || c == L'\\' || c == L':' || c == L'*' || c == L'?' || c == L'"' || c == L'<' || c == L'>' || c == L'|' || c == L'#'
+						|| c == L'.' || c == L',' || c == L'!' || c == L'@' || c == L'$' || c == L'%' || c == L'^' ||/* c == L'&' ||*/ c == L'(' || c == L')'
+						|| c == L'-' || c == L'=' || c == L'_' || c == L'„' || c == L'“' || c == L'–') {
+						word.erase(word.begin() + word.length() - 1);
+					}
+					c = word[0];
+					if (c == L'/' || c == L'\\' || c == L':' || c == L'*' || c == L'?' || c == L'"' || c == L'<' || c == L'>' || c == L'|' || c == L'#'
+						|| c == L'.' || c == L',' || c == L'!' || c == L'@' || c == L'$' || c == L'%' || c == L'^' ||/* c == L'&' ||*/ c == L'(' || c == L')'
+						|| c == L'-' || c == L'=' || c == L'_' || c == L'„' || c == L'“' || c == L'–') {
+						word.erase(word.begin() );
+					}
 					_urls.insert(word);
 					word.clear();
 				}
@@ -72,6 +84,9 @@ void WordCounterWithUrls::input(std::string filename) {
 			if (word.empty()) {
 				continue; 
 			}
+			if (word.find(L"loc") != std::wstring::npos)  {
+				_foundwords.insert(word);
+			}
 			if (_words[word].size() == 0) _words[word].push_back(1);
 			else _words[word][0]++; 
 			_words[word].push_back(counter); 
@@ -98,6 +113,11 @@ void WordCounterWithUrls::output(std::wstring filename) {
 	outputFile << L"Found URLs:" << std::endl;
 	for (const auto& url : _urls) {
 		outputFile << url << std::endl; 
+	}
+	outputFile << L"--------------------------------------------------------" << std::endl;
+	outputFile << L"Found words with \"loc\":" << std::endl;
+	for (const auto& word : _foundwords) {
+		outputFile << word << std::endl;
 	}
 }
 
